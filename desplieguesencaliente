@@ -5,3 +5,6 @@ kubectl rollout history deployment/nginx
 kubectl rollout undo deployment/nginx
 
 kubectl expose deploument/<nombre> --name=<nombre> -port=<port> -type=<tiposervicio> 
+
+
+kubectl run nginx --image=nginx --restar=Always --port=80 --expose=true
