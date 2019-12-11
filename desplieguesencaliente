@@ -1,2 +1,5 @@
 kubectl set image deployment/<nombre> <pod>=imagen --all
 
+kubectl rollout history deployment/nginx
+
+kubectl rollout undo deployment/nginx
