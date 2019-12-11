@@ -96,4 +96,42 @@ kubectl get pod -l run=nginxpod
 Podemos encontrar las etiquetas establecidas en un pod con un describe pod bajo "labels"
 
 
+kubectl exec -it nombrecompletodelpod /bin/bash
+
+con este comando te conectas al pod. Si el pod solo contiene un contenedor automaticamente al conectarte al pod te conectarías a ese contenedor.
+Si el pod contiene más de un contenedor tendriamos que dar el nombre del pod y también del contenedor a conectarnos.
+
+
+
+## Apertura de puertos
+KUBECTL PORT-FORWARD
+Esto solo es para probar, se queda siempre con el prompt
+
+kubectl port-forward nginxpod 8000:80
+
+#ETIQUETAS
+
+se pueden utilizar con pods, deployments, manifest etc.
+Se utilizan sobretodo para buscar
+
+### Establecer label
+kubectl label pod <nombrepod> app=miaplicacion
+
+### mostrar las labels que tengan los pods
+kubectl get pod --show-labels
+
+#mostrar todo lo q tenemos
+kubectl get all
+
+NAME           READY   STATUS    RESTARTS   AGE
+pod/nginxpod   1/1     Running   0          20m
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   43h
+
+
+## escalar horizontalmente
+
+kubectl replicaset scale <nombrepod> --replicas=5
+
 
