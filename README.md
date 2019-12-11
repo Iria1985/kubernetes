@@ -1,5 +1,9 @@
 # kubernetes
 
+¿Que és un pod? Es la unidad mínima de kubernetes.
+
+Lo más recomendable es tener un pod por contenedor por si tenemos que escalar el pod no consumamos recursos sin necesidad.
+
 ## Arrancar un pod
 
 kubectl run nginxpod --image=nginx --restart=Never
