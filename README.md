@@ -84,3 +84,16 @@ Events:
   Normal  Pulled     5s    kubelet, docker-desktop  Successfully pulled image "nginx"
   Normal  Created    5s    kubelet, docker-desktop  Created container nginxpod
   Normal  Started    4s    kubelet, docker-desktop  Started container nginxpod
+
+
+## KUBERNETES SE BASA EN ETIQUETAS
+kubectl get pod -l <valor>
+kubectl get pod -l <clave>=<valor>
+
+kubectl get pod -l run=nginxpod
+
+
+Podemos encontrar las etiquetas establecidas en un pod con un describe pod bajo "labels"
+
+
+
