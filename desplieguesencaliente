@@ -1,0 +1,2 @@
+kubectl set image deployment/<nombre> <pod>=imagen --all
+
