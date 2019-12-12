@@ -26,9 +26,9 @@ spec:
         - name: WORDPRESS_DB_HOST
           value: wordpress-mysql
         - name: WORDPRESS_DB_USER
-          value: wordpressuser
+          value: root
         - name: WORDPRESS_DB_PASSWORD
-          value: wordpresspass
+          value: wordpressrootpass
         ports:
         - containerPort: 80
           name: wordpress		  
