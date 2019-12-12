@@ -197,10 +197,10 @@ type
 selector
 ports:
 	name:
-	port:
-	targetport:
+	port: puerto interno
+	targetport: puerto externo
 	protocol:
-	nodeport:
+	nodeport: externo
 
 
 
