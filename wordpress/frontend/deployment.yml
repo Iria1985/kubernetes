@@ -4,8 +4,6 @@ metadata:
 	name: worpress
 	labels:
 		app: wordpress
-		app: wordpress-frontal
-		app: wordpress-web
 spec:
 	replicas: 3
 	selector:
