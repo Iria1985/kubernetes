@@ -125,3 +125,4 @@ peligro crear discos que luego son abandonados.
 el cluster debe arrancar de una forma especifica para poder usarlo.
 no se suele utilizar por que tiene un coste muy elevado
 NO USAR 
+
