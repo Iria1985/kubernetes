@@ -9,8 +9,10 @@ spec:
     matchLabels:
       app: wordpress
       tier: frontend
+
   strategy:
     type: Recreate
+
   template:
     metadata:
       labels:
@@ -22,7 +24,7 @@ spec:
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
-          value: wordpres-mysql
+          value: wordpress-mysql
         - name: WORDPRESS_DB_USER
           value: wordpressuser
         - name: WORDPRESS_DB_PASSWORD
