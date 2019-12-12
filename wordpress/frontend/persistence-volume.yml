@@ -3,10 +3,13 @@ kind: PersistentVolume
 metadata:
   name: mysql-pv
   labels:
-    app: wordpress
+    type: local
 spec:
+  storageclass: manual 
+  capacity
+    storage: 20Gi
   accessModes:
     - ReadWriteOnce
-  resources:
-    requests:
-      storage: 20Gi
+  ReadWriteMany:
+    hostPath::
+      path: C:\Users\Iria\Desktop\prueba\wp
