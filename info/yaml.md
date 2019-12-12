@@ -143,6 +143,77 @@ spec:
 				  name: application
 
 
-	
-	
+
+
+#DEPLOYMENT
+
+apiVersion: aaps/v1
+kind: Deployment
+
+
+casi siempre crearemos deployments
+propiedades del deployment
+
+replicas: 
+revisionHistoryLimits:
+selector:
+	matchLables:
+	matchExpressions:
+strategy: Recreate|RollingUpdate
+template: describe los pods que tiene que crear
+
+
+
+
+EJEMPLO
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+	name:nginx
+spec:
+	revisionHistoryLimit: 2
+	strategy:
+		type: RollingUpdate
+	replicas: 2
+	template:
+		metadata:
+			ñabels
+			app: miApp
+		spec:
+			containers.
+				-image: civa/applicacion
+				 name; aplicacion
+				 
+				 
+				 
+#SERVICIOS
+
+apiVersion: v1
+kind: Service
+
+propiedades basicas
+type
+selector
+ports:
+	name:
+	port:
+	targetport:
+	protocol:
+	nodeport:
+
+
+
+apiVErsion: v1
+kind: Service
+metadata:
+	name: nginx
+spec:
+	tyoe: ClusterIP
+	ports:
+    - name: http
+	  port: 80
+	  targetPort: http
+	selector:
+		app: nginx
 	
