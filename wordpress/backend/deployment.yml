@@ -10,13 +10,13 @@ spec:
   mathLabels:
    app: wordpress
    tier: backend
- strategy: 
-  type: Recreate
-   template:
-     metadata:
-      labels: 
-       app: wordpress
-       tier: backend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wordpress
+        tier: backend
      spec:
       containers:
        - image: mysql:5.7
