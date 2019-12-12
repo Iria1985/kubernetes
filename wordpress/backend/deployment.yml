@@ -11,7 +11,7 @@ spec:
    app: wordpress
    tier: backend
  strategy: 
-    - type: Recreate
+  type: Recreate
    template:
      metadata:
       labels: 
