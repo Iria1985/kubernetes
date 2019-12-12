@@ -7,6 +7,7 @@ metadata:
 		app: wordpress-frontal
 		app: wordpress-web
 spec:
+	replicas: 3
 	selector:
 		mathLabels:
 			app: wordpress
@@ -18,18 +19,17 @@ spec:
 			labels: 
 				app: wordpress
 				tier: frontend
-spec:
-	containers:
-		- image: wordpress:latest
-		  name: wordpress
-		  env:
-		  - name: WORDPRESS_DB_HOST
-			value: wordpres-mysql
-		  - name: WORDPRESS_DB_USER
-			value: wordpressuser
-		  - name: WORDPRESS_DB_PASSWORD
-			value: wordpresspass
-		  ports:
-		  - containerPort: 80
-			name: wordpress		
-		  replicas: 3
+		spec:
+			containers:
+				- image: wordpress:latest
+				  name: wordpress
+				  env:
+				  - name: WORDPRESS_DB_HOST
+					value: wordpres-mysql
+				  - name: WORDPRESS_DB_USER
+					value: wordpressuser
+				  - name: WORDPRESS_DB_PASSWORD
+					value: wordpresspass
+				  ports:
+				  - containerPort: 80
+					name: wordpress		  
