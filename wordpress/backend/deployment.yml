@@ -3,9 +3,7 @@ kind: Deployment
 metadata:
  name: worpress-mysql
   labels:
-   app1: wordpress
-   app2: worpress-bbdd
-   app3: worpress-mysql
+   app: wordpress
 spec:
  replicas: 1
  selector:
