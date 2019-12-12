@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: wordpress
-  labels:
-   app: wordpress
+ name: wordpress-mysql
+ labels:
+  app: wordpress
 spec:
  replicas: 1
  selector:
-   mathLabels:
+  mathLabels:
    app: wordpress
-    tier: backend
-    strategy: 
-     type: Recreate
-    template:
+   tier: backend
+ strategy: 
+    - type: Recreate
+   template:
      metadata:
       labels: 
        app: wordpress
