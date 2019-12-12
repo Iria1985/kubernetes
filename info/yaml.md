@@ -120,4 +120,29 @@ OnFailure: se reinicia si el Pod falla. En caso de ser eliminado por el sistema 
 	
 	
 	
+# REPLICASET
+apiVersion: apps/v1
+kind: ReplicaSet
+
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+	name: nginx
+spec:
+	replicas: 2
+	selector:
+		matchLabels:
+			app: nginx
+	templates:
+		metadata:
+			labels:
+				app: miApp
+			spec:
+				containers:
+				- image: couva/application
+				  name: application
+
+
+	
+	
 	
