@@ -79,6 +79,25 @@ containers:
         command: ["/sbin/bash", "-c", "echo hello > /usr/share/message"]
 
 
+
+
+LOS NODOS TIENE QUE TENER ETIQUETAS PARA PODER HACER UN CONSTRAIN
+
+kubectl label nodes nombrenodo 
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+ name: nginx
+spec:
+containers:
+- name: nginx
+  image: nginx
+noseSelector:
+  type: tipo1
+	
+	
 	
 	
 	
