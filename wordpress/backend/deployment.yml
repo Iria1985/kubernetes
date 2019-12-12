@@ -1,35 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-	name: worpress-mysql
-	labels:
-		app1: wordpress
-		app2: worpress-bbdd
-		app3: worpress-mysql
+ name: worpress-mysql
+  labels:
+   app1: wordpress
+   app2: worpress-bbdd
+   app3: worpress-mysql
 spec:
-    replicas: 1
-	selector:
-		mathLabels:
-			app: wordpress
-			tier: backend
-	strategy: 
-		type: Recreate
-	template:
-		metadata:
-			labels: 
-				app: wordpress
-				tier: backend
-		spec:
-			containers:
-				- image: mysql:5.7
-				  name: mysql
-				  env:
-				  - name: MYSQL_USER
-					value: wordpressuser
-				  - name: MYSQL_PASSWORD
-					value: wordpresspass
-				  - name: MYSQL_ROOT_PASSWORD
-					value: wordpressrootpass
-				  ports:
-				  - containerPort: 3306
-					name: backend
+ replicas: 1
+ selector:
+   mathLabels:
+   app: wordpress
+    tier: backend
+    strategy: 
+     type: Recreate
+    template:
+     metadata:
+      labels: 
+       app: wordpress
+       tier: backend
+     spec:
+      containers:
+       - image: mysql:5.7
+         name: mysql
+         env:
+         - name: MYSQL_USER
+           value: wordpressuser
+         - name: MYSQL_PASSWORD
+           value: wordpresspass
+         - name: MYSQL_ROOT_PASSWORD
+           value: wordpressrootpass
+         ports:
+         - containerPort: 3306
+           name: backend
