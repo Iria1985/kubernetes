@@ -114,4 +114,14 @@ volumes:
  	storageClassName: manual
  	accessMods:
  		-Read
- 		
+
+
+
+# PERSISTENVOLUMECLAIMSDYNAMICS
+
+crea un persistent volume a demanda. Se utiliza en cloud
+peligro crear discos que luego son abandonados.
+
+el cluster debe arrancar de una forma especifica para poder usarlo.
+no se suele utilizar por que tiene un coste muy elevado
+NO USAR 
