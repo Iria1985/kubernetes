@@ -217,3 +217,19 @@ spec:
 	selector:
 		app: nginx
 	
+
+	
+LOS SERVICIOS NUNCA SE CAEN --> ELLOS SE ENCARGARAN DE GESTIONAR LOS PUERTOS. UNA VEZ ASIGNADO UNO POR KUBERNETES SIEMPRE SERÁ EL MISMO
+
+para eliminar todo lo que se haya de desplegado con el yml
+
+kubectl delete -f nombrefichero.yml
+
+
+para desplegar todo lo que esté en un yml
+kubectl apply -f nombrefichero.yml
+
+pero si hacemos un kubectl apply -f . instalaríamos todos los ymls de la carpeta actual.
+
+
+
