@@ -98,6 +98,26 @@ noseSelector:
   type: tipo1
 	
 	
+nodeName: es una forma más simple para la restricción de ejecución de un Pod.
+
+spec:
+containers:
+- name: nginx
+  image: nginx
+NodoName:
+nombredelnodo
+
+
+Si se cae el nodo se queda sin servicio. No recomendado sobretodo si se usan nodos en la nube.
+
+
+##La política de restartPolice
+
+Never
+Always
+OnFailure: se reinicia si el Pod falla. En caso de ser eliminado por el sistema o por el usuario no se reinicia.
+
+	
 	
 	
 	
