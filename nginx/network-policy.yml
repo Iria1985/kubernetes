@@ -3,7 +3,7 @@ kind: NetworkPolicy
 metadata:
   name: default-deny
 spec:
-  podSelector: {}
+  podSelector: { app: nginx }
   policyTypes:
   - Ingress
   - Egress
