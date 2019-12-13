@@ -11,4 +11,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath::
-   Path: /c/Users/Iria/Desktop/prueba/mysql
+   path: /c/Users/Iria/Desktop/prueba/mysql
