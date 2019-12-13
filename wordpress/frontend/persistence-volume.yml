@@ -10,6 +10,5 @@ spec:
     storage: 2Gi
   accessModes:
     - ReadWriteOnce
-  ReadWriteMany:
-    hostPath::
-      path: /c/Users/Iria/Desktop/prueba/wp
+  hostPath::
+   path: /c/Users/Iria/Desktop/prueba/wp
