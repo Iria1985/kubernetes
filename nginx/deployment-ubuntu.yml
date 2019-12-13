@@ -25,6 +25,8 @@ spec:
       containers:
       - image: ubuntu:latest
         name: ubuntu
+        command: [ "/bin/bash", "-c", "--" ]
+        args: [ "while true; do sleep 30; done;" ]
         ports:
         - containerPort: 80
           name: ubuntu
