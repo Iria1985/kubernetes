@@ -1,3 +1,6 @@
+jmcousino@pymit.es
+jsanchez@pymit.es
+
 # kubernetes
 ¿Que és un pod? Es la unidad mínima de kubernetes.
 
